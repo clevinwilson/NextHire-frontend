@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+.btn-primary {
+    background-color: #3973df !important;
+}
+
+.btn-primary:hover {
+    background-color: #2760c9 !important;
+    border-color: #2760c9 !important;
+}
+
+.text-primary {
+    color: #3973df !important;
+}
+
+.font-size-small {
+    font-size: smaller;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+form label {
+    color: #17193d;
+}
+
+form input {
+    font-size: 0.89rem !important;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgb(156, 165, 174) !important;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.custom-label,
+.font-size-12 {
+    font-size: 12px !important;
+}
+
+.button-font-size {
+    font-size: 15px !important;
+}
+
+.text-black-50 {
+    color: #4745458a;
+}
