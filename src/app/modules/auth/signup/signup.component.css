@@ -1,0 +1,40 @@
+.divider:after,
+.divider:before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: calc(100%);
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+#login-container {
+    background-image: url('/assets/images/signup-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 24px #d9d4d4;
+    padding: 24px 46px;
+}
+
+.login-form-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login-form-paragrah {
+    font-size: 11px;
+    color: rgb(145 148 151 / 75%);
+    line-height: 17px;
+    font-weight: 500;
+}

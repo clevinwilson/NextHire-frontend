@@ -1,12 +1,3 @@
-.btn-primary {
-    background-color: #3973df !important;
-}
-
-.btn-primary:hover {
-    background-color: #2760c9 !important;
-    border-color: #2760c9 !important;
-}
-
 .text-primary {
     color: #3973df !important;
 }
@@ -37,10 +28,6 @@ form textarea::placeholder {
 .custom-label,
 .font-size-12 {
     font-size: 12px !important;
-}
-
-.button-font-size {
-    font-size: 15px !important;
 }
 
 .text-black-50 {
