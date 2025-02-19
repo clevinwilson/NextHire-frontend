@@ -1,0 +1,11 @@
+<button
+    type="button"
+    data-mdb-button-init
+    data-mdb-ripple-init
+    class="btn btn-{{ color() }} btn-lg button-font-size"
+    style="padding-left: 2.5rem; padding-right: 2.5rem"
+    [ngClass]="customClasses()"
+    [disabled]="disabled()"
+>
+    {{ label() }}
+</button>

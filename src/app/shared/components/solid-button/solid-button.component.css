@@ -1,0 +1,11 @@
+.button-font-size {
+    font-size: 15px !important;
+}
+.btn-primary {
+    background-color: #3973df !important;
+}
+
+.btn-primary:hover {
+    background-color: #2760c9 !important;
+    border-color: #2760c9 !important;
+}
