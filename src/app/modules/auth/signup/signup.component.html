@@ -2,7 +2,7 @@
     <div class="container-fluid h-custom" id="login-container">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-8 col-lg-6 col-xl-4 offset-md-3">
-                <form class="auth-form">
+                <form class="auth-form" [formGroup]="form" (ngSubmit)="onFormSubmit()">
                     <div>
                         <span class="login-form-title mt-2">Let's Get Your!</span>
                         <br />
@@ -14,15 +14,27 @@
                         <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example3"
                             >Email address</label
                         >
-                        <input type="email" id="form3Example3" class="form-control form-control-md p-2" placeholder="Email address" />
+                        <input
+                            type="email"
+                            id="form3Example3"
+                            class="form-control form-control-md p-2"
+                            placeholder="Email address"
+                            [formControl]="form.controls.email"
+                        />
                     </div>
 
                     <!-- Password input -->
                     <div data-mdb-input-init class="form-outline mb-3">
-                        <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example4"
+                        <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="formEmail"
                             >Password</label
                         >
-                        <input type="password" id="form3Example4" class="form-control form-control-md p-2" placeholder="Password" />
+                        <input
+                            type="password"
+                            id="formEmail"
+                            class="form-control form-control-md p-2"
+                            placeholder="Password"
+                            [formControl]="form.controls.password"
+                        />
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
@@ -37,7 +49,7 @@
                     </div>
 
                     <div class="text-lg-start mt-4 pt-2 d-flex justify-content-between align-items-center">
-                        <app-solid-button class="w-100" [label]="'Sign Up'" [customClasses]="'w-100'"></app-solid-button>
+                        <app-solid-button class="w-100" [label]="'Sign Up'" [customClasses]="'w-100'" type="submit"></app-solid-button>
                     </div>
 
                     <!-- <div class="divider d-flex align-items-center my-4">
