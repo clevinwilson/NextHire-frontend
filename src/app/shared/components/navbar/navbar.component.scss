@@ -1,0 +1,13 @@
+/* Center text on large screens only */
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .navbar-center {
+        display: none;
+    }
+}

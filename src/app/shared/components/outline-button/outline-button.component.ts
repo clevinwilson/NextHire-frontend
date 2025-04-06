@@ -1,11 +1,11 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-    selector: 'app-solid-button',
-    templateUrl: './solid-button.component.html',
-    styleUrl: './solid-button.component.scss'
+    selector: 'app-outline-button',
+    templateUrl: './outline-button.component.html',
+    styleUrl: './outline-button.component.scss'
 })
-export class SolidButtonComponent {
+export class OutlineButtonComponent {
     label = input.required<string>();
     color = input<string>('primary');
     type = input<string>('button');

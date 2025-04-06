@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md bg-light border-bottom position-relative">
+    <div class="container-fluid">
+        <!-- Left: Logo -->
+
+        <a class="navbar-brand text-primary" href="#">NextHire</a>
+
+        <!-- Center Text (Desktop Only) -->
+        <div class="navbar-center d-none d-md-block">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Copanies</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav ms-auto w-100 justify-content-md-end text-center">
+                <!-- Center Text (Mobile Only) -->
+                <li class="nav-item d-md-none">
+                    <span class="nav-link fw-bold">Center Text</span>
+                </li>
+                <!-- Right Text -->
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="#">Login</a>
+                    <app-outline-button [label]="'Sing up'" [customClasses]="'text-dark ms-2 px-4'"></app-outline-button>
+                    <!-- <app-solid-button [label]="'Post job'" [customClasses]="'text-white ms-2 px-4'"></app-solid-button> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

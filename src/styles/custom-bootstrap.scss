@@ -1,0 +1,11 @@
+// Override Bootstrap variables BEFORE importing Bootstrap
+$primary: #1A75E8; // Example custom primary color (deep purple)
+$secondary: #ff5722; // Example secondary color (deep orange)
+$success: #4caf50;
+$danger: #f44336;
+$info: #00bcd4;
+$warning: #ffc107;
+$dark: #0F1137;
+
+// Import Bootstrap SCSS
+@import 'bootstrap/scss/bootstrap';

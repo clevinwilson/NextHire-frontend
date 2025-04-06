@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'app-layout-manager',
     templateUrl: './layout-manager.component.html',
-    styleUrl: './layout-manager.component.css'
+    styleUrl: './layout-manager.component.scss'
 })
 export class LayoutManagerComponent {
     layoutType: string = 'main';
