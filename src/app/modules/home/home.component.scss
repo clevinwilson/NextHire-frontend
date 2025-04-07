@@ -1,0 +1,49 @@
+#home {
+    background-image: url('/assets/images/home-banner-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#home h1 {
+    font-size: 3.1rem;
+    font-weight: 700;
+}
+#home h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        height: 60vh;
+        background-position: inherit;
+    }
+
+    #home h1 {
+        font-size: 2.079rem;
+        font-weight: 600;
+    }
+
+    
+}
+
+input.form-control {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  
+    &:focus {
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }

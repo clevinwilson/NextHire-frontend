@@ -1,1 +1,25 @@
-<app-navbar/>
+<app-navbar />
+<section id="home" class="w3l-banner py-5">
+    <div class="container">
+        <div class="row profile-info-wrap align-items-center">
+            <div class="profile-info col-lg-6 col-sm-12 mt-lg-0 ms-lg-3 mt-4">
+                <h1 class="mb-2 text-primary"><span class="text-dark">Land Dream</span> Job</h1>
+                <h1 class="mb-2 text-primary mt-2"><span class="text-dark">Make Your Dream</span> Happen</h1>
+                <p class="text-dark mt-4">Where ambition meets opportunity to shape your future with confidence.</p>
+                <div class="col-md-9 d-flex bg-white rounded-3 shadow-lg mt-5 p-2 justify-content-center align-items-center">
+                    <img class="ms-2" width="25px" src="/assets/svg/icons8-search.svg" alt="" />
+                    <input type="text" class="ms-2 form-control border border-0" placeholder="Search for jobs" />
+                    <app-solid-button [label]="'Search'" [customClasses]="'text-white ms-2 px-5 py-3'"></app-solid-button>
+                </div>
+                <div class="mt-4 d-flex align-items-center cursor-pointer">
+                    <span class="text-body-tertiary">Example: </span>
+                    <div class="ms-2 d-flex">
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 border border-dark-subtle">Front-End</span>
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle">Back-End</span>
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle">Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
