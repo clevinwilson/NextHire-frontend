@@ -1,0 +1,21 @@
+#icon-card {
+    width: 11rem;
+    height: 8rem;
+    max-width: 11rem;
+    cursor: pointer;
+}
+
+#icon-card:hover {
+    cursor: pointer;
+    background-color: #3973df !important;
+    color: white !important;
+    box-shadow: 0px 2px 6px 6px #f0f0f0;
+    transition: all 0.3s ease-in-out;
+    .icon-wrap {
+        color: white !important;
+    }
+}
+
+.icon-wrap {
+    color: #aeb4c1 !important;
+}

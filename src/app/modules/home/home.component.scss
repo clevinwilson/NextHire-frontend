@@ -32,18 +32,31 @@
         font-size: 2.079rem;
         font-weight: 600;
     }
-
-    
 }
 
 input.form-control {
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-  
+
     &:focus {
-      border: none !important;
-      box-shadow: none !important;
-      outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
     }
-  }
+}
+
+.category-wrap {
+    overflow: auto;
+
+    // For WebKit (Chrome, Safari)
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // For Firefox
+    scrollbar-width: none;
+
+    // For IE/Edge (legacy)
+    -ms-overflow-style: none;
+}

@@ -1,4 +1,4 @@
-<app-navbar />
+<app-navbar></app-navbar>
 <section id="home" class="w3l-banner py-5">
     <div class="container">
         <div class="row profile-info-wrap align-items-center">
@@ -14,11 +14,33 @@
                 <div class="mt-4 d-flex align-items-center cursor-pointer">
                     <span class="text-body-tertiary">Example: </span>
                     <div class="ms-2 d-flex">
-                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 border border-dark-subtle">Front-End</span>
-                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle">Back-End</span>
-                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle">Designer</span>
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 border border-dark-subtle"
+                            >Front-End</span
+                        >
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle"
+                            >Back-End</span
+                        >
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle"
+                            >Designer</span
+                        >
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <h3 class="text-dark bold">Categories</h3>
+        <div class="row mt-4">
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto">
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
             </div>
         </div>
     </div>

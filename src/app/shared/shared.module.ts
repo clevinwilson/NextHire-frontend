@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 import { SolidButtonComponent } from './components/solid-button/solid-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { OutlineButtonComponent } from './components/outline-button/outline-button.component';
+import { IconCardComponent } from './components/icon-card/icon-card.component';
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent],
-    exports: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent]
+    declarations: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent],
+    exports: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent]
 })
 export class SharedModule {}
