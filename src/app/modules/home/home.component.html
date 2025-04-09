@@ -2,7 +2,7 @@
 <section id="home" class="w3l-banner py-5">
     <div class="container">
         <div class="row profile-info-wrap align-items-center">
-            <div class="profile-info col-lg-6 col-sm-12 mt-lg-0 ms-lg-3 mt-4">
+            <div class="profile-info col-lg-6 col-sm-12 mt-lg-0 ms-lg-3 mt-5 mt-md-4">
                 <h1 class="mb-2 text-primary"><span class="text-dark">Land Dream</span> Job</h1>
                 <h1 class="mb-2 text-primary mt-2"><span class="text-dark">Make Your Dream</span> Happen</h1>
                 <p class="text-dark mt-4">Where ambition meets opportunity to shape your future with confidence.</p>
@@ -11,7 +11,7 @@
                     <input type="text" class="ms-2 form-control border border-0" placeholder="Search for jobs" />
                     <app-solid-button [label]="'Search'" [customClasses]="'text-white ms-2 px-5 py-3'"></app-solid-button>
                 </div>
-                <div class="mt-4 d-flex align-items-center cursor-pointer">
+                <div class="mt-4 d-flex align-items-center cursor-pointer overflow-hidden">
                     <span class="text-body-tertiary">Example: </span>
                     <div class="ms-2 d-flex">
                         <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 border border-dark-subtle"
@@ -41,6 +41,25 @@
                 <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
                 <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
                 <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-0 py-md-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center text-muted ">
+            <h3 class="text-dark bold">Featured jobs</h3>
+            <span
+                >Feature jobs
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcUlEQVR4nO3VywmAMBBF0SnALizMtejCugJ5mzHuJE4nVqIiNiBCjJ93IOu5TCARISL6GgxjCbUqy3DnYgG12eu0QGOdJcKrdXvAEWEtI/zrNoHe1hTndAQSBvhgjdx9BeDw8Ke1uyc8xcj5GRERyQUbAKwPQruOdvAAAAAASUVORK5CYII="
+                    alt="long-arrow-right"
+            /></span>
+        </div>
+        <div class="row mt-2 mt-md-4">
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
             </div>
         </div>
     </div>
