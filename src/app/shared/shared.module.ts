@@ -6,10 +6,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { OutlineButtonComponent } from './components/outline-button/outline-button.component';
 import { IconCardComponent } from './components/icon-card/icon-card.component';
 import { JobInfoCardComponent } from './components/job-info-card/job-info-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent, JobInfoCardComponent],
-    exports: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent, JobInfoCardComponent]
+    declarations: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent, JobInfoCardComponent, FooterComponent],
+    exports: [SolidButtonComponent, NavbarComponent, OutlineButtonComponent, IconCardComponent, JobInfoCardComponent, FooterComponent]
 })
 export class SharedModule {}
