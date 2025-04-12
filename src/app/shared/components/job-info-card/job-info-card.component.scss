@@ -20,9 +20,12 @@
     }
 }
 
-.job-card-wrap:hover{
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01);
+.job-card-wrap {
     transition: all 0.3s ease;
+}
+
+.job-card-wrap:hover {
+    box-shadow: 1px 4px 13px rgb(199 199 199);
+    transform: scale(1.01);
     cursor: pointer;
 }

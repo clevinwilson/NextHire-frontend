@@ -48,7 +48,7 @@
 
 <section class="py-0 py-md-4">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center text-muted ">
+        <div class="d-flex justify-content-between align-items-center text-muted">
             <h3 class="text-dark bold">Featured jobs</h3>
             <span
                 >Feature jobs
@@ -60,6 +60,32 @@
         <div class="row mt-2 mt-md-4">
             <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
                 <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <app-solid-button class="text-center mt-4" [label]="'More job'" [customClasses]="'px-5'"></app-solid-button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container mt-4">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-md-start align-items-center lh-lg">
+                <h3 class="text-primary fw-bold">World Top Company <span class="text-dark">Post</span></h3>
+                <h3 class="fw-bold">Their Jop In Here</h3>
+                <p class="mt-4 text-center text-md-start">
+                    It aims to bring job posting to people looking for job remotly from all over the world by offering free and high quality
+                    service to companies that prefe us.
+                </p>
+                <app-solid-button class="text-center mt-4" [label]="'Get started'" [customClasses]="'px-5'"></app-solid-button>
+            </div>
+            <div class="col-md-6 p-3 p-md-5">
+                <img class="w-100" src="/assets/images/job-card.jpeg" alt="" />
             </div>
         </div>
     </div>
