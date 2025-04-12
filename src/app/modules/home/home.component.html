@@ -1,1 +1,201 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+<section id="home" class="w3l-banner py-5">
+    <div class="container">
+        <div class="row profile-info-wrap align-items-center">
+            <div class="profile-info col-lg-6 col-sm-12 mt-lg-0 ms-lg-3 mt-5 mt-md-4">
+                <h1 class="mb-2 text-primary"><span class="text-dark">Land Dream</span> Job</h1>
+                <h1 class="mb-2 text-primary mt-2"><span class="text-dark">Make Your Dream</span> Happen</h1>
+                <p class="text-dark mt-4">Where ambition meets opportunity to shape your future with confidence.</p>
+                <div class="col-md-9 d-flex bg-white rounded-3 shadow-lg mt-5 p-2 justify-content-center align-items-center">
+                    <img class="ms-2" width="25px" src="/assets/svg/icons8-search.svg" alt="" />
+                    <input type="text" class="ms-2 form-control border border-0" placeholder="Search for jobs" />
+                    <app-solid-button [label]="'Search'" [customClasses]="'text-white ms-2 px-5 py-3'"></app-solid-button>
+                </div>
+                <div class="mt-4 d-flex align-items-center cursor-pointer overflow-hidden">
+                    <span class="text-body-tertiary">Example: </span>
+                    <div class="ms-2 d-flex">
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 border border-dark-subtle"
+                            >Front-End</span
+                        >
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle"
+                            >Back-End</span
+                        >
+                        <span class="badge bg-transparent text-body-tertiary text-center p-2 px-3 ms-2 border border-dark-subtle"
+                            >Designer</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <h3 class="text-dark bold">Categories</h3>
+        <div class="row mt-2 mt-md-4">
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-0 py-md-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center text-muted">
+            <h3 class="text-dark bold">Featured jobs</h3>
+            <span
+                >Feature jobs
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcUlEQVR4nO3VywmAMBBF0SnALizMtejCugJ5mzHuJE4nVqIiNiBCjJ93IOu5TCARISL6GgxjCbUqy3DnYgG12eu0QGOdJcKrdXvAEWEtI/zrNoHe1hTndAQSBvhgjdx9BeDw8Ke1uyc8xcj5GRERyQUbAKwPQruOdvAAAAAASUVORK5CYII="
+                    alt="long-arrow-right"
+            /></span>
+        </div>
+        <div class="row mt-2 mt-md-4">
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                <app-job-info-card class="w-100"></app-job-info-card>
+            </div>
+            <app-solid-button class="text-center mt-4" [label]="'More job'" [customClasses]="'px-5'"></app-solid-button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container my-4">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-md-start align-items-center lh-lg">
+                <h3 class="text-primary fw-bold">World Top Company <span class="text-dark">Post</span></h3>
+                <h3 class="fw-bold">Their Jop In Here</h3>
+                <p class="mt-4 text-center text-md-start">
+                    It aims to bring job posting to people looking for job remotly from all over the world by offering free and high quality
+                    service to companies that prefe us.
+                </p>
+                <app-solid-button class="text-center" [label]="'Get started'" [customClasses]="'px-5'"></app-solid-button>
+            </div>
+            <div class="col-md-6 p-3 p-md-5">
+                <img class="w-100" src="/assets/images/job-card.jpeg" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-secondary">
+    <div class="container">
+        <div class="row p-4">
+            <div class="col-md-12">
+                <div class="d-flex flex-column justify-content-center align-items-center lh-lg">
+                    <h3 class="text-dark bold">Featured Companies</h3>
+                    <div class="col-11 col-sm-10 col-md-8 col-lg-6">
+                        <p class="mt-4 text-center">
+                            Amazing companies are looking for great talents. <br />
+                            Join us to find your dream job and make a difference in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center align-items-center mt-3 mb-4">
+                <div class="col-md-8">
+                    <div class="row mt-md-5 d-flex justify-content-center align-items-center">
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img
+                                width="120px"
+                                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img
+                                width="120px"
+                                src="https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img
+                                width="120px"
+                                src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img
+                                width="120px"
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img width="120px" src="https://pngimg.com/uploads/github/github_PNG23.png" alt="" srcset="" />
+                        </div>
+                        <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                            <img
+                                width="120px"
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/93/Facebook_logo_%282023%29.svg"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container my-4">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-6 p-3 p-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0">
+                <img class="w-75" src="/assets/images/open-ad-bg.jpeg" alt="" />
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-md-start align-items-center lh-lg">
+                <h3 class="text-primary fw-bold">Open an Ad For a</h3>
+                <h3 class="fw-bold">Great Employee</h3>
+                <p class="col-11 col-md-8 mt-4 text-center text-md-start">
+                    Open your advertisement now to find the most suitable candidate for your team and working principles anywhere in the
+                    world, and create the best team!
+                </p>
+                <app-solid-button class="text-center" [label]="'Get started'" [customClasses]="'px-5'"></app-solid-button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 px-4 py-5">
+                <div class="bg-secondary p-4 rounded-3 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="text-primary text-center fw-bold">
+                        <span class="text-dark">Subscribe</span> Newsletter <span class="text-dark">& get</span>
+                    </h4>
+                    <h4 class="text-primary text-center fw-bold"><span class="text-dark">Company News</span></h4>
+                    <div class="col-md-4 d-flex bg-white rounded-3 shadow-lg mt-3 mt-md-5 p-2 justify-content-center align-items-center">
+                        <input type="text" class="ms-2 form-control border border-0" placeholder="Email address" />
+                        <app-solid-button [label]="'Subscribe'" [customClasses]="'text-white ms-2 px-4 py-3'"></app-solid-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <app-footer></app-footer>
+</section>

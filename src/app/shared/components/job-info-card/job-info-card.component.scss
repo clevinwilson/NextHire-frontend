@@ -1,0 +1,31 @@
+.company-logo-wrap {
+    background: #dde1e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .company-logo-wrap {
+        height: 50px;
+        width: 50px;
+    }
+    .company-logo-wrap img {
+        height: 30px;
+        width: 30px;
+    }
+    .company-info p {
+        font-size: 13px;
+    }
+}
+
+.job-card-wrap {
+    transition: all 0.3s ease;
+}
+
+.job-card-wrap:hover {
+    box-shadow: 1px 4px 13px rgb(199 199 199);
+    transform: scale(1.01);
+    cursor: pointer;
+}
