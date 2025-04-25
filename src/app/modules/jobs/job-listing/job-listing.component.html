@@ -1,0 +1,217 @@
+<div class="positon-absolute">
+    <app-navbar></app-navbar>
+    <section class="bg-secondary h-300 d-flex justify-content-center align-items-center position-relative top-0">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-10 mt-4">
+                    <h4 class="text-dark fw-bold d-none d-md-block"><span class="text-primary">Discover the</span> best jobs</h4>
+                    <h2 class="fw-bold d-md-none"><span class="text-dark">Discover the</span></h2>
+                    <h2 class="text-primary d-md-none mt-2">best jobs</h2>
+                    <p class="text-body-tertiary">
+                        Home
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="12"
+                            height="12"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 492.004 492.004"
+                            style="enable-background: new 0 0 512 512"
+                            xml:space="preserve"
+                        >
+                            <g>
+                                <path
+                                    d="M382.678 226.804 163.73 7.86C158.666 2.792 151.906 0 144.698 0s-13.968 2.792-19.032 7.86l-16.124 16.12c-10.492 10.504-10.492 27.576 0 38.064L293.398 245.9l-184.06 184.06c-5.064 5.068-7.86 11.824-7.86 19.028 0 7.212 2.796 13.968 7.86 19.04l16.124 16.116c5.068 5.068 11.824 7.86 19.032 7.86s13.968-2.792 19.032-7.86L382.678 265c5.076-5.084 7.864-11.872 7.848-19.088.016-7.244-2.772-14.028-7.848-19.108z"
+                                    fill="#b0b0b0"
+                                    opacity="1"
+                                    data-original="#000000"
+                                ></path>
+                            </g>
+                        </svg>
+                        jobs
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="col-11 col-md-5 d-flex bg-white rounded-3 shadow-lg p-2 justify-content-center align-items-center position-absolute top-100 start-50 translate-middle"
+        >
+            <img class="ms-2" width="25px" src="/assets/svg/icons8-search.svg" alt="" />
+            <input type="text" class="ms-2 form-control border border-0" placeholder="Search for jobs" />
+            <app-solid-button [label]="'Search'" [customClasses]="'text-white ms-2 px-5 py-3'"></app-solid-button>
+        </div>
+    </section>
+    <section class="py-5 mt-4">
+        <div class="container">
+            <h3 class="text-dark bold">Categories</h3>
+            <div class="row mt-2 mt-md-4">
+                <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3 h-200">
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                    <app-icon-card [customClasses]="'bg-secondary'"></app-icon-card>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-0 py-md-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center text-muted">
+                <h3 class="text-dark bold">Featured jobs</h3>
+                <span
+                    >Feature jobs
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcUlEQVR4nO3VywmAMBBF0SnALizMtejCugJ5mzHuJE4nVqIiNiBCjJ93IOu5TCARISL6GgxjCbUqy3DnYgG12eu0QGOdJcKrdXvAEWEtI/zrNoHe1hTndAQSBvhgjdx9BeDw8Ke1uyc8xcj5GRERyQUbAKwPQruOdvAAAAAASUVORK5CYII="
+                        alt="long-arrow-right"
+                /></span>
+            </div>
+            <div class="row mt-2 mt-md-4">
+                <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                    <app-job-info-card class="w-100"></app-job-info-card>
+                </div>
+                <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                    <app-job-info-card class="w-100"></app-job-info-card>
+                </div>
+                <div class="category-wrap col-md-12 d-flex align-items-center gap-4 overflow-auto py-3">
+                    <app-job-info-card class="w-100"></app-job-info-card>
+                </div>
+                <app-solid-button class="text-center mt-4" [label]="'More job'" [customClasses]="'px-5'"></app-solid-button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container my-4">
+            <div class="row flex-column-reverse flex-md-row">
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-md-start align-items-center lh-lg">
+                    <h3 class="text-primary fw-bold">World Top Company <span class="text-dark">Post</span></h3>
+                    <h3 class="fw-bold">Their Jop In Here</h3>
+                    <p class="mt-4 text-center text-md-start">
+                        It aims to bring job posting to people looking for job remotely from all over the world by offering free and high
+                        quality service to companies that prefer us.
+                    </p>
+                    <app-solid-button class="text-center" [label]="'Get started'" [customClasses]="'px-5'"></app-solid-button>
+                </div>
+                <div class="col-md-6 p-3 p-md-5">
+                    <img class="w-100" src="/assets/images/job-card.jpeg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary">
+        <div class="container">
+            <div class="row p-4">
+                <div class="col-md-12">
+                    <div class="d-flex flex-column justify-content-center align-items-center lh-lg">
+                        <h3 class="text-dark bold">Featured Companies</h3>
+                        <div class="col-11 col-sm-10 col-md-8 col-lg-6">
+                            <p class="mt-4 text-center">
+                                Amazing companies are looking for great talents. <br />
+                                Join us to find your dream job and make a difference in the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center align-items-center mt-3 mb-4">
+                    <div class="col-md-8">
+                        <div class="row mt-md-5 d-flex justify-content-center align-items-center">
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img
+                                    width="120px"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </div>
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img
+                                    width="120px"
+                                    src="https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </div>
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img
+                                    width="120px"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </div>
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img
+                                    width="120px"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </div>
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img width="120px" src="https://pngimg.com/uploads/github/github_PNG23.png" alt="" srcset="" />
+                            </div>
+                            <div class="col-6 col-md-4 mt-5 d-flex justify-content-center align-items-center">
+                                <img
+                                    width="120px"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/93/Facebook_logo_%282023%29.svg"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container my-4">
+            <div class="row flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-3 p-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0">
+                    <img class="w-75" src="/assets/images/open-ad-bg.jpeg" alt="" />
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-md-start align-items-center lh-lg">
+                    <h3 class="text-primary fw-bold">Open an Ad For a</h3>
+                    <h3 class="fw-bold">Great Employee</h3>
+                    <p class="col-11 col-md-8 mt-4 text-center text-md-start">
+                        Open your advertisement now to find the most suitable candidate for your team and working principles anywhere in the
+                        world, and create the best team!
+                    </p>
+                    <app-solid-button class="text-center" [label]="'Get started'" [customClasses]="'px-5'"></app-solid-button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 px-4 px-md-5 py-5">
+                    <div class="bg-secondary p-4 rounded-3 d-flex flex-column justify-content-center align-items-center">
+                        <h4 class="text-primary text-center fw-bold">
+                            <span class="text-dark">Subscribe</span> Newsletter <span class="text-dark">& get</span>
+                        </h4>
+                        <h4 class="text-primary text-center fw-bold"><span class="text-dark">Company News</span></h4>
+                        <div
+                            class="col-md-4 d-flex bg-white rounded-3 shadow-lg mt-3 mt-md-5 p-2 justify-content-center align-items-center"
+                        >
+                            <input type="text" class="ms-2 form-control border border-0" placeholder="Email address" />
+                            <app-solid-button [label]="'Subscribe'" [customClasses]="'text-white ms-2 px-4 py-3'"></app-solid-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <app-footer></app-footer>
+    </section>
+</div>
