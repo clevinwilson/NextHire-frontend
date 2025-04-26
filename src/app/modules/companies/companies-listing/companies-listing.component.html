@@ -33,17 +33,27 @@
             </div>
         </div>
     </div>
-    <div
-        class="col-11 col-md-5 d-flex bg-white rounded-3 shadow-lg p-2 justify-content-center align-items-center position-absolute top-100 start-50 translate-middle"
-    >
-        <img class="ms-2" width="25px" src="/assets/svg/icons8-search.svg" alt="" />
-        <input type="text" class="ms-2 form-control border border-0" placeholder="Search for companies" />
-        <app-solid-button [label]="'Search'" [customClasses]="'text-white ms-2 px-5 py-3'"></app-solid-button>
+    <div class="col-11 col-md-5 d-flex rounded-3 shadow-lg position-absolute top-100 start-50 translate-middle">
+        <app-search-card class="w-100" [placeholder]="'Search for companies'"></app-search-card>
     </div>
 </section>
 <section class="py-5 mt-4">
     <div class="container">
-        <h3 class="text-dark bold">Categories</h3>
+        <h3 class="text-dark bold">Companies List</h3>
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-3">
+                <app-company-card></app-company-card>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <app-company-card></app-company-card>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <app-company-card></app-company-card>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <app-company-card></app-company-card>
+            </div>
+        </div>
     </div>
 </section>
 
