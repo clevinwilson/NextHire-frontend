@@ -6,10 +6,11 @@ import { LayoutManagerComponent } from './layout-manager/layout-manager.componen
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
     declarations: [LayoutManagerComponent, PublicLayoutComponent, AuthLayoutComponent, AdminLayoutComponent],
-    imports: [LayoutRoutingModule, RouterOutlet],
+    imports: [LayoutRoutingModule, RouterOutlet, SharedModule],
     exports: [LayoutRoutingModule, LayoutManagerComponent]
 })
 export class LayoutModule {}
