@@ -2,10 +2,9 @@
     [attr.type]="type()"
     data-mdb-button-init
     data-mdb-ripple-init
-    class="btn btn-{{ color() }} btn-lg button-font-size text-white"
-    style="padding-left: 2.5rem; padding-right: 2.5rem"
+    class="btn btn-{{ color() }} btn-lg button-font-size text-white padded-button"
     [ngClass]="customClasses()"
     [disabled]="disabled()"
 >
-    {{ label() }}
+    <ng-content></ng-content>
 </button>

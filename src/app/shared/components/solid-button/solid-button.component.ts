@@ -6,7 +6,6 @@ import { Component, input } from '@angular/core';
     styleUrl: './solid-button.component.scss'
 })
 export class SolidButtonComponent {
-    label = input.required<string>();
     color = input<string>('primary');
     type = input<string>('button');
     disabled = input<boolean>(false);
