@@ -19,8 +19,16 @@
                             id="form3Example3"
                             class="form-control form-control-md p-2"
                             placeholder="Email address"
+                            [ngClass]="{
+                                'border border-danger': emailIsInvalidErrorMessage
+                            }"
                             [formControl]="form.controls.email"
                         />
+                        @if(emailIsInvalidErrorMessage){
+                        <div class="form-text text-danger">
+                            <span class="text-danger">{{ emailIsInvalidErrorMessage }}</span>
+                        </div>
+                        }
                     </div>
 
                     <!-- Password input -->
@@ -33,8 +41,16 @@
                             id="formEmail"
                             class="form-control form-control-md p-2"
                             placeholder="Password"
+                            [ngClass]="{
+                                'border border-danger': passwordIsInvalidErrorMessage
+                            }"
                             [formControl]="form.controls.password"
                         />
+                        @if(passwordIsInvalidErrorMessage){
+                        <div class="form-text text-danger">
+                            <span class="text-danger">{{ passwordIsInvalidErrorMessage }}</span>
+                        </div>
+                        }
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
