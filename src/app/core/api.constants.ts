@@ -24,5 +24,6 @@ export const API_ENDPOINTS = {
     USERS: {
         GET_PROFILE: 'users/profile',
         UPDATE_PROFILE: 'users/profile'
-    }
+    },
+    CHECK_EMAIL: 'check-email'
 };
