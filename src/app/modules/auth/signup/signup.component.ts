@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -21,6 +21,9 @@ export class SignupComponent {
     formSubmitted: boolean = false;
     errorMessage: string | null = null; // To display API error messages
     isLoading: boolean = false;
+    authApiService = inject(AuthApiService);
+    authService = inject(AuthService);
+    router = inject(Router);
 
     form = new FormGroup({
         email: new FormControl('', {
@@ -31,8 +34,6 @@ export class SignupComponent {
         password: new FormControl('', [Validators.required, Validators.minLength(8)]),
         termsAccepted: new FormControl(false, Validators.requiredTrue)
     });
-
-    constructor(private authApiService: AuthApiService, private authService: AuthService, private router: Router) {}
 
     /**
      * Returns the error message for the email field if it is invalid.

@@ -9,6 +9,11 @@
                         <span class="login-form-title text-primary mt-4">Account Set Up!</span>
                         <p class="login-form-paragrah mt-2">Join us and unlock amazing opportunities.</p>
                     </div>
+                    @if(errorMessage){
+                    <div class="form-text text-danger text-center mb-3">
+                        <span class="text-danger">{{ errorMessage }}</span>
+                    </div>
+                    }
                     <!-- Email input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                         <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example3"
