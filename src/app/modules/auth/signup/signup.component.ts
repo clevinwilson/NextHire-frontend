@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 import { AuthApiService } from '../services/auth-api.service';
 import { AuthService } from '../../../core/auth/auth.service';
 import { SolidButtonComponent } from '../../../shared/components/solid-button/solid-button.component';
+import { emailExistsValidator } from '../../../core/validators/email.validator';
+import { StoreService } from '../services/store.service';
 
 @Component({
     selector: 'app-signup',
@@ -20,13 +22,20 @@ export class SignupComponent {
     formSubmitted: boolean = false;
     errorMessage: string | null = null; // To display API error messages
     isLoading: boolean = false;
+    private authApiService = inject(AuthApiService);
+    private authService = inject(AuthService);
+    private router = inject(Router);
+    private storeService = inject(StoreService);
 
     form = new FormGroup({
-        email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [Validators.required, Validators.minLength(8)])
+        email: new FormControl('', {
+            validators: [Validators.required, Validators.email],
+            asyncValidators: [emailExistsValidator()],
+            updateOn: 'blur'
+        }),
+        password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+        termsAccepted: new FormControl(false, Validators.requiredTrue)
     });
-
-    constructor(private authApiService: AuthApiService, private authService: AuthService, private router: Router) {}
 
     /**
      * Returns the error message for the email field if it is invalid.
@@ -39,6 +48,8 @@ export class SignupComponent {
                 return 'Email is required';
             } else if (this.form.controls.email.hasError('email')) {
                 return 'Email must be a valid email address.';
+            } else if (emailControl.hasError('emailTaken')) {
+                return 'This email is already taken.';
             }
         }
         return '';
@@ -77,10 +88,9 @@ export class SignupComponent {
             this.authApiService.registerUser({ email: email!, password: password!, confirmPassword: password! }).subscribe({
                 next: (response) => {
                     this.isLoading = false;
-
-                    if (response.success && response.data) {
-                        console.log('User registered successfully:', response.data.user);
-                        this.authService.setToken(response.data.token);
+                    if (response.user) {
+                        this.authService.setToken(response.token);
+                        this.storeService.setUser(response.user, response.token);
                         this.router.navigate(['/']);
                         this.form.reset();
                         this.formSubmitted = false;

@@ -2,7 +2,7 @@
     <div class="container-fluid h-custom" id="login-container">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-8 col-lg-6 col-xl-4 offset-md-3">
-                <form class="auth-form">
+                <form class="auth-form" [formGroup]="form" (ngSubmit)="onFormSubmit()">
                     <div>
                         <span class="login-form-title text-primary mt-4">Hello Again!</span>
                         <br />
@@ -12,12 +12,31 @@
                             in your career journey.
                         </p>
                     </div>
+                    @if(errorMessage){
+                    <div class="form-text text-danger text-center mb-3">
+                        <span class="text-danger">{{ errorMessage }}</span>
+                    </div>
+                    }
                     <!-- Email input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                         <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example3"
                             >Email address</label
                         >
-                        <input type="email" id="form3Example3" class="form-control form-control-md p-2" placeholder="Email address" />
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-control form-control-md p-2"
+                            placeholder="Email address"
+                            [ngClass]="{
+                                'border border-danger': emailIsInvalidErrorMessage
+                            }"
+                            [formControl]="form.controls.email"
+                        />
+                        @if(emailIsInvalidErrorMessage){
+                        <div class="form-text text-danger">
+                            <span class="text-danger">{{ emailIsInvalidErrorMessage }}</span>
+                        </div>
+                        }
                     </div>
 
                     <!-- Password input -->
@@ -25,20 +44,44 @@
                         <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example4"
                             >Password</label
                         >
-                        <input type="password" id="form3Example4" class="form-control form-control-md p-2" placeholder="Password" />
+                        <input
+                            type="password"
+                            id="password"
+                            minlength="8"
+                            class="form-control form-control-md p-2"
+                            placeholder="Password"
+                            [ngClass]="{
+                                'border border-danger': passwordIsInvalidErrorMessage
+                            }"
+                            [formControl]="form.controls.password"
+                        />
+                        @if(passwordIsInvalidErrorMessage){
+                        <div class="form-text text-danger">
+                            <span class="text-danger">{{ passwordIsInvalidErrorMessage }}</span>
+                        </div>
+                        }
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Checkbox -->
                         <div class="form-check ms-1 mb-0 custom-label">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                            <label class="form-check-label text-secondary" for="form2Example3"> Remember me </label>
+                            <input
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value=""
+                                name="rememberMe"
+                                id="rememberMe"
+                                [formControl]="form.controls.rememberMe"
+                            />
+                            <label class="form-check-label text-dark" for="form2Example3"> Remember me </label>
                         </div>
                         <a href="#!" class="text-primary custom-label font-weight-500">Forgot password?</a>
                     </div>
 
                     <div class="text-lg-start mt-4 pt-2 d-flex justify-content-between align-items-center">
-                        <app-solid-button class="w-100" [customClasses]="'w-100'">Login</app-solid-button>
+                        <app-solid-button class="w-100" [customClasses]="'w-100'" [disabled]="!form.valid" type="submit"
+                            >Login</app-solid-button
+                        >
                     </div>
 
                     <!-- <div class="divider d-flex align-items-center my-4">

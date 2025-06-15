@@ -1,20 +1,18 @@
 export interface User {
-  id?: string;
-  email: string;
-  // Add other user properties you expect from the backend, e.g., name, role
-  firstName?: string;
-  lastName?: string;
+    id?: string;
+    email: string;
+    firstName?: string;
+    lastName?: string;
 }
 
-export interface AuthResponse {
-  token: string;
-  user: User;
+export interface AuthApiResponse {
+    token: string;
+    user: User;
+    message: string;
 }
 
-// Generic API response structure used across your application
-export interface ApiResponse<T> {
-  success: boolean;
-  message?: string;
-  data?: T;
-  error?: string; // For API-specific error messages
+// Email check response structure
+export interface EmailCheckResponse {
+    exists: boolean;
+    message?: string;
 }

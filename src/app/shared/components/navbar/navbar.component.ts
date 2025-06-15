@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { OutlineButtonComponent } from '../outline-button/outline-button.component';
+import { AuthService } from '../../../core/auth/auth.service';
 
 @Component({
     selector: 'app-navbar',
@@ -11,4 +12,15 @@ import { OutlineButtonComponent } from '../outline-button/outline-button.compone
     standalone: true,
     imports: [CommonModule, RouterModule, OutlineButtonComponent]
 })
-export class NavbarComponent {}
+
+export class NavbarComponent {
+    user = input<any>();
+    isAuthenticated = input<boolean>();
+
+    route = inject(Router);
+    authService = inject(AuthService);
+
+    logout() {
+        this.authService.logout();
+    }
+}

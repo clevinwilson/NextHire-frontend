@@ -35,11 +35,17 @@
                     <span class="nav-link fw-bold">Center Text</span>
                 </li>
                 <!-- Right Text -->
+                @if(isAuthenticated()) {
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="#" (click)="logout()">Logout</a>
+                </li>
+                } @else {
                 <li class="nav-item d-flex">
                     <a class="nav-link active" aria-current="page" href="#">Login</a>
                     <app-outline-button [label]="'Sing up'" [customClasses]="'text-dark ms-2 px-4'"></app-outline-button>
                     <!-- <app-solid-button [label]="'Post job'" [customClasses]="'text-white ms-2 px-4'"></app-solid-button> -->
                 </li>
+                }
             </ul>
         </div>
     </div>

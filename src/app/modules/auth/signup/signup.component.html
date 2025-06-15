@@ -9,6 +9,11 @@
                         <span class="login-form-title text-primary mt-4">Account Set Up!</span>
                         <p class="login-form-paragrah mt-2">Join us and unlock amazing opportunities.</p>
                     </div>
+                    @if(errorMessage){
+                    <div class="form-text text-danger text-center mb-3">
+                        <span class="text-danger">{{ errorMessage }}</span>
+                    </div>
+                    }
                     <!-- Email input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                         <label class="form-label text-uppercase text-lg-start font-size-small font-weight-500" for="form3Example3"
@@ -16,7 +21,7 @@
                         >
                         <input
                             type="email"
-                            id="form3Example3"
+                            id="email"
                             class="form-control form-control-md p-2"
                             placeholder="Email address"
                             [ngClass]="{
@@ -38,7 +43,8 @@
                         >
                         <input
                             type="password"
-                            id="formEmail"
+                            id="password"
+                            minlength="8"
                             class="form-control form-control-md p-2"
                             placeholder="Password"
                             [ngClass]="{
@@ -56,8 +62,15 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Checkbox -->
                         <div class="form-check ms-1 mb-0 custom-label d-flex">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                            <label class="form-check-label text-secondary" for="form2Example3"
+                            <input
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value=""
+                                name="termsAccepted"
+                                id="termsAccepted"
+                                [formControl]="form.controls.termsAccepted"
+                            />
+                            <label class="form-check-label text-dark" for="termsAccepted"
                                 >By creating an account, you confirm that you have read and agree to our Terms & Conditions and Privacy
                                 Policy.</label
                             >
@@ -65,7 +78,9 @@
                     </div>
 
                     <div class="text-lg-start mt-4 pt-2 d-flex justify-content-between align-items-center">
-                        <app-solid-button class="w-100" [customClasses]="'w-100'" type="submit">Sign Up</app-solid-button>
+                        <app-solid-button class="w-100" [customClasses]="'w-100'" type="submit" [disabled]="!form.valid"
+                            >Sign Up</app-solid-button
+                        >
                     </div>
 
                     <!-- <div class="divider d-flex align-items-center my-4">
