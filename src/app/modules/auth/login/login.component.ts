@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 import { SolidButtonComponent } from '../../../shared/components/solid-button/solid-button.component';
 import { AuthApiService } from '../services/auth-api.service';
 import { AuthService } from '../../../core/auth/auth.service';
-import { HttpErrorResponse } from '@angular/common/http';
+import { StoreService } from '../services/store.service';
 
 @Component({
     selector: 'app-login',
@@ -19,9 +20,10 @@ export class LoginComponent {
     formSubmitted: boolean = false;
     errorMessage: string | null = null; // To display API error messages
     isLoading: boolean = false;
-    authApiService = inject(AuthApiService);
-    authService = inject(AuthService);
-    router = inject(Router);
+    private authApiService = inject(AuthApiService);
+    private authService = inject(AuthService);
+    private router = inject(Router);
+    private storeService = inject(StoreService);
 
     form = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
@@ -82,6 +84,7 @@ export class LoginComponent {
                     this.isLoading = false;
                     if (response.user) {
                         this.authService.setToken(response.token);
+                        this.storeService.setUser(response.user, response.token);
                         this.router.navigate(['/']);
                         this.form.reset();
                         this.formSubmitted = false;

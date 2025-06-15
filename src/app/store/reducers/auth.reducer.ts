@@ -7,7 +7,7 @@ export interface AuthState {
     token: string | null;
 }
 
-const initialState: AuthState = {
+export const initialState: AuthState = {
     isAuthenticated: false,
     user: null,
     token: null
@@ -15,7 +15,7 @@ const initialState: AuthState = {
 
 export const authReducer = createReducer(
     initialState,
-    on(AuthActions.loginSuccess, (state, { user, token }) => ({
+    on(AuthActions.setUser, (state, { user, token }) => ({
         ...state,
         isAuthenticated: true,
         user,

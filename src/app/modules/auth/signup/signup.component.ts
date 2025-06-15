@@ -9,6 +9,7 @@ import { AuthApiService } from '../services/auth-api.service';
 import { AuthService } from '../../../core/auth/auth.service';
 import { SolidButtonComponent } from '../../../shared/components/solid-button/solid-button.component';
 import { emailExistsValidator } from '../../../core/validators/email.validator';
+import { StoreService } from '../services/store.service';
 
 @Component({
     selector: 'app-signup',
@@ -21,9 +22,10 @@ export class SignupComponent {
     formSubmitted: boolean = false;
     errorMessage: string | null = null; // To display API error messages
     isLoading: boolean = false;
-    authApiService = inject(AuthApiService);
-    authService = inject(AuthService);
-    router = inject(Router);
+    private authApiService = inject(AuthApiService);
+    private authService = inject(AuthService);
+    private router = inject(Router);
+    private storeService = inject(StoreService);
 
     form = new FormGroup({
         email: new FormControl('', {
@@ -87,8 +89,8 @@ export class SignupComponent {
                 next: (response) => {
                     this.isLoading = false;
                     if (response.user) {
-                        console.log('User registered successfully:', response.user);
                         this.authService.setToken(response.token);
+                        this.storeService.setUser(response.user, response.token);
                         this.router.navigate(['/']);
                         this.form.reset();
                         this.formSubmitted = false;
