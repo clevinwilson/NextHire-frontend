@@ -37,13 +37,31 @@
                 <!-- Right Text -->
                 @if(isAuthenticated()) {
                 <li class="nav-item d-flex">
-                    <a class="nav-link active" aria-current="page" href="#" (click)="logout()">Logout</a>
+                    <div class="dropdown dropstart">
+                        <a class="d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img
+                                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                                class="rounded-circle"
+                                height="30"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </a>
+                        <ul class="dropdown-menu position-absolute profile-settings-wrap end-0">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+                        </ul>
+                    </div>
                 </li>
                 } @else {
                 <li class="nav-item d-flex">
-                    <a class="nav-link active" aria-current="page" href="#">Login</a>
-                    <app-outline-button [label]="'Sing up'" [customClasses]="'text-dark ms-2 px-4'"></app-outline-button>
-                    <!-- <app-solid-button [label]="'Post job'" [customClasses]="'text-white ms-2 px-4'"></app-solid-button> -->
+                    <a class="nav-link active" aria-current="page" routerLink="/auth/login">Login</a>
+                    <app-outline-button
+                        [label]="'Sing up'"
+                        [customClasses]="'text-dark ms-2 px-4'"
+                        (buttonClicked)="goToSignupPage()"
+                    ></app-outline-button>
                 </li>
                 }
             </ul>

@@ -12,7 +12,6 @@ import { AuthService } from '../../../core/auth/auth.service';
     standalone: true,
     imports: [CommonModule, RouterModule, OutlineButtonComponent]
 })
-
 export class NavbarComponent {
     user = input<any>();
     isAuthenticated = input<boolean>();
@@ -22,5 +21,9 @@ export class NavbarComponent {
 
     logout() {
         this.authService.logout();
+    }
+
+    goToSignupPage(): void {
+        this.route.navigate(['/auth/signup']);
     }
 }

@@ -30,8 +30,15 @@
                                 "input": "public"
                             }
                         ],
-                        "styles": ["src/styles/styles.scss", "src/styles/custom-bootstrap.scss"],
-                        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
+                        "styles": [
+                            "src/styles/styles.scss",
+                            "src/styles/custom-bootstrap.scss"
+                        ],
+                        "scripts": [
+                            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+                            "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                        ],
                         "stylePreprocessorOptions": {
                             "includePaths": ["node_modules"]
                         }

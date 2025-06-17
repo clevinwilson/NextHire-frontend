@@ -4,6 +4,7 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import { routes } from './app.routes';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
